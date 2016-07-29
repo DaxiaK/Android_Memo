@@ -30,11 +30,13 @@ compile fileTree(dir: 'libs', include: ['*.jar'])}
 
 ```
 $git submodule [--quiet] add [-b <branch>] [-f|--force] [--name <name>] [--reference <repository>] [--] <repository> [<path>]
-//For exampl
+//For example
 $git submodule add https://android.googlesource.com/platform/frameworks/volley app/libs/volley
 ```
 
-上面的意思就是將rack這個專案當作子專案掛入 rack目錄下，接下來把新加進來的source從Android Studio中設定好Modules就完成了，這樣一來你的主程式的git就跟新加進來soruce就會分開來處理了，如此一來不用擔心source的管理會影響到你的主程式，也因為Android Studio modules的特性，讓你再開發上也更好區分哪些是你的主程式，哪些則是其他的source!
+上面的意思就是將volley這個專案當作子專案掛入 app\/libs\/volley目錄下
+
+接下來把新加進來的source從Android Studio中設定好Modules就完成了，這樣一來你的主程式的git就跟新加進來soruce就會分開來處理了，如此一來不用擔心source的管理會影響到你的主程式，也因為Android Studio modules的特性，讓你再開發上也更好區分哪些是你的主程式，哪些則是其他的source!
 
 ## 教學
 
@@ -42,12 +44,11 @@ $git submodule add https://android.googlesource.com/platform/frameworks/volley a
 
 1. Add volley to submodule
 
-
 ```
 ~/desgin/Sample$ git submodule add https://android.googlesource.com/platform/frameworks/volley app/libs/volleyCloning into 'app/libs/volley'...remote: Counting objects: 179, doneremote: Finding sources: 100% (179/179)remote: Total 3237 (delta 302), reused 3237 (delta 302)Receiving objects: 100% (3237/3237), 1.23 MiB | 0 bytes/s, done.Resolving deltas: 100% (302/302), done.Checking connectivity... done.
 ```
 
-2.Open Android Studio & Add VCS 
+2.Open Android Studio & Add VCS
 
 ![](/assets/submodule1.jpeg)
 
