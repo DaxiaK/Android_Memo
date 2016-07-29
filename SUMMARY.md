@@ -2,5 +2,5 @@
 
 * [Introduction](README.md)
 * [Project](chapter1/project.md)
-    * [Submodule 和 modules](chapter1/SubmoduleAndModules.md)
+    * [Git Submodule 和 Android Studio Modules](chapter1/SubmoduleAndModules.md)
 

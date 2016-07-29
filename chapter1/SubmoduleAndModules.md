@@ -1,4 +1,4 @@
-# Git Submodule 和Android Studio Modules
+# Git Submodule 和 Android Studio Modules
 
 ## 簡介
 
@@ -70,7 +70,11 @@ $git submodule add https://android.googlesource.com/platform/frameworks/volley a
 
 這樣我們就可以分開管理不同的Code也不會衝突了！
 
-最後，如果要clone一個含有submodule的專案，記得git clone後要再使用來完成下載submodule
+
+
+
+
+最後，如果要clone一個含有submodule的專案，記得git clone後要再使用下面的指令完成下載submodule
 
 ```
 $git submodule init 
