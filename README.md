@@ -1,3 +1,4 @@
-# My Awesome Book
+# Android Memo
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+記錄所有好玩的、燒腦的、無聊的、殺時間的或是有的沒有的的東西！
+
