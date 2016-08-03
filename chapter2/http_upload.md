@@ -2,8 +2,9 @@
 
 ## sample
 
-This Class HttpURLConnection to simulate multipart\/form-data of http post.
-The nuiltipart\/form-data was defined : [http:\/\/www.ietf.org\/rfc\/rfc1867.txt](http://www.ietf.org/rfc/rfc1867.txt)
+This Class HttpURLConnection to simulate multipart/form-data of http post.
+
+The nuiltipart\/form-data was defined : [http://www.ietf.org/rfc/rfc1867.txt](http://www.ietf.org/rfc/rfc1867.txt)
 
 ```
 String lineEnd = "\r\n";
