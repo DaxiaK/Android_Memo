@@ -2,9 +2,9 @@
 
 ## sample
 
-This Class HttpURLConnection to simulate multipart/form-data of http post.
+This Class HttpURLConnection to simulate multipart\/form-data of http post.
 
-The nuiltipart\/form-data was defined : [http://www.ietf.org/rfc/rfc1867.txt](http://www.ietf.org/rfc/rfc1867.txt)
+The nuiltipart\/form-data was defined : [http:\/\/www.ietf.org\/rfc\/rfc1867.txt](http://www.ietf.org/rfc/rfc1867.txt)
 
 ```
 String lineEnd = "\r\n";
@@ -97,6 +97,18 @@ protected String generateBoundary() {
  return buffer.toString();
 }
 
+
+```
+
+PHP test server
+```
+<?php  $file_path = "/home/yourname/path";
+ $file_path = $file_path . basename( $_FILES['file']['name']);
+ if(move_uploaded_file($_FILES['file']['tmp_name'], $file_path)) {
+ echo "success";
+ } else{
+ echo "fail";
+ }
 
 ```
 
