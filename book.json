@@ -1,1 +1,1 @@
-{ "plugins": ["disqus"], "pluginsConfig": { "disqus": { "shortName": "daxia-kuo.disqus.com" } } }
+{ "plugins": ["disqus"], "pluginsConfig": { "disqus": { "shortName": "daxia-kuo" } } }
