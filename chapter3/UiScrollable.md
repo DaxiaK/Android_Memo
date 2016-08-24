@@ -2,19 +2,18 @@
 
 ## what's wrong ?
 
-`UiScrollbale.getChildByText()` sometime will scroll a little times that it can't find  
-the uiobject in screen.
+`UiScrollbale.getChildByText()` sometime will scroll a little , and make the devices can't find the right uiobject in screen , finally throw `UiObjectNotFoundException`.
 
 The root cause may be from system before Android 6.0.
 
 
 ## flow
 
-When you call the `getChildByText` , its flow is :
+When you call the `getChildByText()` , its flow is :
 
 `getChildByText -> scrollIntoView -> scrollForward -> scrollSwipe`
 
-In `scrollSwipe` , system will run swipe command , wait , than find all `AccessibilityEvent` and `filter AccessibilityEvent.TYPE_VIEW_SCROLLED` in current screen. This step make UiScrollable scroll again or check it in the end.
+In `scrollSwipe` , system will run swipe command , wait , than find all `AccessibilityEvent` and filter `AccessibilityEvent.TYPE_VIEW_SCROLLED` in current screen. This step make UiScrollable scroll again or check it in the end.
 
 But the bug is here , system can't return right `AccessibilityEvent` before Android 6.0 , especially in Android 4.4 .
 
