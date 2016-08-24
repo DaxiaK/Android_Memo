@@ -8,7 +8,8 @@
 * [Android test](chapter3/android_test.md)
   * [uiautomator](chapter3/uiautomator.md)
     * [UiScrollable bug](chapter3/UiScrollable.md)
-
+* [APK](chapter4/apk.md)
+ * [Proguard](chapter4/ProGuard.md)
 
 
 
