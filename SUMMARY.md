@@ -5,7 +5,11 @@
   * [Git Submodule 和 Android Studio Modules](chapter1/SubmoduleAndModules.md)
 * [Source](chapter2/source.md)
   * [http upload](chapter2/http_upload.md)
-* [Android Test](chapter3/android_test.md)
+* [Android test](chapter3/android_test.md)
   * [uiautomator](chapter3/uiautomator.md)
+    * [UiScrollable bug](chapter3/UiScrollable.md)
+
+
+
 
 
