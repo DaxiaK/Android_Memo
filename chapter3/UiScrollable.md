@@ -4,8 +4,7 @@
 
 `UiScrollbale.getChildByText()` sometime will scroll a little , and make the devices can't find the right uiobject in screen , finally throw `UiObjectNotFoundException`.
 
-The root cause may be from system before Android 6.0.
-
+The root cause may be from system .
 
 ## flow
 
@@ -15,7 +14,7 @@ When you call the `getChildByText()` , its flow is :
 
 In `scrollSwipe` , system will run swipe command , wait , than find all `AccessibilityEvent` and filter `AccessibilityEvent.TYPE_VIEW_SCROLLED` in current screen. This step make UiScrollable scroll again or check it in the end.
 
-But the bug is here , system can't return right `AccessibilityEvent` before Android 6.0 , especially in Android 4.4 .
+But the bug is here , system can't return right `AccessibilityEvent` .
 
 ```
 public boolean scrollSwipe(final int downX, final int downY, final int upX, final int upY, final int steps) 
@@ -55,7 +54,6 @@ Runnable command = new Runnable() {
 
 I think the best way is that Overriding the code and defining the suitable MaxSearchSwipes , and if the item is over this size , make the test fail.
 
-
 ```
 public class UiScrollableFix extends UiScrollable {
 public UiScrollableFix(UiSelector container) 
@@ -80,20 +78,14 @@ public UiScrollableFix(UiSelector container)
    return true; 
    }
 
-    //For avoiding the scroll fail. 
-   if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) { 
-      if (!scrolled) { 
-      return false; 
-       } 
-     } 
+       //For avoiding the scroll fail.
+       // if (!scrolled && x!=0) {
+       //return false;
+       // }
    }
  } 
 return false; 
 }
 }
 ```
-
-
-
-
 
