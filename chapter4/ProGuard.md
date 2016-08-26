@@ -7,7 +7,7 @@ ProGuard is a Java class file shrinker, optimizer, obfuscator, and preverifier. 
 
 Each of these steps is optional. For instance, ProGuard can also be used to just list dead code in an application, or to preverify class files for efficient use in Java 6.
 
-**簡單來說 - ProGuard是一個用來優化與混淆程式的工具**
+**簡單來說 - ProGuard是一個用來優化與混淆程式碼的工具**
 
 需要ProGuard是因為Android是基於Java來作為開發，Java本身很容易的被反編譯而導致程式碼外流，增加資安的疑慮，
 同時ProGuard也會移除不用的程式碼，讓程式更輕巧，且提升效能。
@@ -31,7 +31,7 @@ ProGuard會將程式碼轉換成簡單且不易閱讀的名稱，如果我們不
 2. When your app calls a method from the Java Native Interface (JNI)
 3. When your app manipulates code at runtime (such as with reflection or introspection)
 
-第一類是常見的Activity,Service等等定義在ndroidManifest的東西，第二類JNI比較沒什麼好說。
+第一類是常見的Activity,Service等等定義在AndroidManifest的東西，第二類JNI比較沒什麼好說。
 實務上最長遇到的多是處於第三類，其中包含：
 
 * Signature / generics（泛型）
