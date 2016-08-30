@@ -39,7 +39,7 @@ ProGuard會將程式碼轉換成簡單且不易閱讀的名稱，如果我們不
 * Java Invoke
 * R file
 * Custom view
-
+* enum
 
 ## proguard-android.txt & proguard-rules.pro
 看到上述那麼多種類，先別擔心，其實大部分的東西在Android中有一份`proguard-android.txt`都處理好了，具體位置在 `<sdk-root>/tools/proguard/ `，我們只需針對額外的需求，在`gradle - module`底下設定好`proguard-rules.pro`即可。
@@ -108,7 +108,4 @@ For example:
 
 `retrace.bat -verbose mapping.txt obfuscated_trace.txt`
 
-該工具位於 `<sdk-root>/tools/proguard/`。
-
-
-
+該工具位於 `<sdk-root>/tools/proguard/bin`。
