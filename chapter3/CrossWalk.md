@@ -109,8 +109,10 @@ public class MainActivity extends Activity {
     }
 }
 ```
-##其他
+##參考資料
 
+[
+](https://diego.org/2015/01/07/embedding-crosswalk-in-android-studio/)
 對於crosswalk的一些狀況，我寫在這邊：
 
 **多重Webview** 
@@ -140,4 +142,8 @@ Error:Execution failed for task ':app:dexDebug'.
 經過測試確實也可以順利的執行，不必太擔心！
 
 
+##參考資料
+
+[https://diego.org/2015/01/07/embedding-crosswalk-in-android-studio/](https://diego.org/2015/01/07/embedding-crosswalk-in-android-studio/)
+[https://crosswalk-project.org/documentation/getting_started.html](https://crosswalk-project.org/documentation/getting_started.html)
 
