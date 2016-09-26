@@ -109,10 +109,8 @@ public class MainActivity extends Activity {
     }
 }
 ```
-##參考資料
+##心得
 
-[
-](https://diego.org/2015/01/07/embedding-crosswalk-in-android-studio/)
 對於crosswalk的一些狀況，我寫在這邊：
 
 **多重Webview** 
