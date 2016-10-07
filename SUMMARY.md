@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 * [Project](chapter1/project.md)
   * [Git Submodule 和 Android Studio Modules](chapter1/SubmoduleAndModules.md)
+  * [Git flow](chapter1/git_flow.md)
 * [Source](chapter2/source.md)
   * [http upload](chapter2/http_upload.md)
 * [Android test](chapter3/android_test.md)
