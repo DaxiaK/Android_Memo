@@ -55,7 +55,7 @@ HTTP持久連線（HTTP persistent connection，也稱作HTTP keep-alive或HTTP 
 Each HttpURLConnection instance is used to make a single request but the underlying network connection to the HTTP server may be transparently shared by other instances
 ```
 
-我看到網路上比較好理解的說明是，可以將HttpURLConnection製造的request想成是一個想問的問題，而socket connection是電話！我們可以播通電話後，問對方一個問題，接下來對方會回應，然後掛斷電話。當然我們也可以在一通電話裡面先問對方問題後，等待對方回答完，接下來我們繼續問下一個問題，並等待對方回答，所以這樣子就會變成一通電話(socket connection)有多個問題(request)。
+我看到網路上比較好理解的說明是，可以將HttpURLConnection製造的request想成是一個想問的問題，而socket connection是電話！我們可以播通電話後(connect socket connection)，問對方一個問題(request)，接下來對方會回應(respones)，然後掛斷電話。當然我們也可以在一通電話裡面先問對方問題後，等待對方回答完，接下來我們繼續問下一個問題，並等待對方回答，所以這樣子就會變成一通電話(socket connection)有多個問題(request)。
 
 上面的例子結合Keep-Alive後，就是我們問完問題(request)後，告訴對方我現在沒問題了(call disconnect())，此時這通電話有可能會被掛斷，也有可能就放著，當我下一次忽然想到問題後，如果發現電話還沒掛掉，我可以不用浪費時間在撥號碼等待對方接電話(e.g.  Three Way Handshake  in TCP )，我可以直接就問下一個問題(request)了。
 
