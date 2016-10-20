@@ -6,6 +6,7 @@
   * [Git flow](chapter1/git_flow.md)
 * [Source](chapter2/source.md)
   * [http upload](chapter2/http_upload.md)
+  * [Epipe](chapter2/Epipe.md)
 * [Android test](chapter3/android_test.md)
   * [uiautomator](chapter3/uiautomator.md)
     * [UiScrollable bug](chapter3/UiScrollable.md)
