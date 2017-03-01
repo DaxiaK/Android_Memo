@@ -9,7 +9,7 @@
 
 
 ##Concepts
-Fresco 採用類似MVC的三層模式來處理圖片，分別是DraweeView、DraweeHierarchy和DraweeController。
+Fresco 採用類似MVC的三層模式來處理圖片，分別是DraweeView (View) 、DraweeHierarchy(Model)和DraweeController(Controller)。
 大部分的情況下建議儘量使用SimpleDraweeView來完成處理圖片需求，因DraweeController默認使用了 image pipeline來管理記憶體，而SimpleDraweeView會自動完成相關的控制過程。
 
 如果對於圖片的控制有額外的需求，DraweeController可以來做一些自定義的設定。
@@ -24,7 +24,7 @@ Fresco不支援相對路徑，餵給它的都必須是帶有scheme的絕對路�
 ##  ImageRequest
 
 
-要更進階的使用DraweeController，必須使用ImageRequest來處理圖片，下面是使用Postprocessor(修改圖片的methid)的例子
+要更進階的使用DraweeController，必須使用ImageRequest來處理圖片，下面是使用Postprocessor(修改圖片的method)的例子
 ```
 Uri uri;
 Postprocessor myPostprocessor = new Postprocessor() { ... }
@@ -49,9 +49,10 @@ Fersco提供三種resize方式來減少記憶體的使用：
 
 3. **Downsampling** is also a pipeline operation implemented in software. Rather than creating a new encoded image, it simply decodes only a subset of the pixels, resulting in a smaller output bitmap.
 
-簡單來說，如果圖片大小變化不大的話，可以使用Scaling，如此一來不必浪費記憶體來多產生一張bitmap，而其他情況則建議使用Resizing。(例如使用相機拍照，返回的大小一定超出當前的view許多) 大很多的定義是：
+簡單來說，如果圖片大小變化不大的話，可以使用Scaling，如此一來不必浪費記憶體來多產生一張bitmap，而其他情況則建議使用Resizing。(例如使用相機拍照，返回的大小一定超出當前的view許多) 
 
 
+大很多的定義是：
 圖片的總像素 > view的大小 x 2 (in total number of pixels, i.e. width*height)
 
 
