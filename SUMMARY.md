@@ -15,7 +15,7 @@
 * [APK](chapter4/apk.md)
   * [Proguard](chapter4/ProGuard.md)
 * [3rd party Libraries](3rd-party-libraries.md)
-  * [Fresco](chapter4/Fresco.md)
+  * [Fresco](chapter5/Fresco.md)
 
 
 
